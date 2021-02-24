@@ -31,6 +31,12 @@ class App extends Component {
     }))
   }
 
+  removeContact = () => {
+    //get the index of that actor in the array and use it to remove the contact from the array
+    //    setState()
+
+  }
+
   render() {
     
     return (
@@ -47,6 +53,7 @@ class App extends Component {
         <th>Picture</th>
         <th>Name</th>
         <th>Popularity</th>
+        <th>Action</th>
         </tr>
           </thead>
        
@@ -57,6 +64,7 @@ class App extends Component {
                   <td><img src={contact.pictureUrl} style={{width: '100px'}} alt="portrait"/></td>
                   <td>{contact.name}</td>
                   <td>{contact.popularity.toFixed(2)}</td>
+                  <td><button onclick={this.removeContact}>Delete</button></td>
                 </tr>
           
           )
